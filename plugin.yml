@@ -1,0 +1,34 @@
+name: DeathMessagesPrime
+main: email.com.gmail.cosmoconsole.bukkit.deathmsg.DeathMessagesPrime
+version: 1.16.6
+api-version: 1.13
+description: Very customizable death message interface.
+author: CosmoConsole
+commands:
+   dmsg:
+      description: See the version of the plugin and reload it.
+      usage: /<command> [reload | uuid playername]
+   toggledeathmsg:
+      description: Toggle whether death messages are visible, does not persist over restarts.
+      usage: /<command>
+permissions:
+   deathmessagesprime.*:
+      description: Gives access to all DeathMessagesPrime features.
+      default: op
+      children:
+         deathmessagesprime.version: true
+         deathmessagesprime.reload: true
+         deathmessagesprime.debug: true
+         deathmessagesprime.toggle: true
+   deathmessagesprime.version:
+      description: Gives access to view the version of DeathMessagesPrime with the /dmsg command.
+      default: op
+   deathmessagesprime.reload:
+      description: Gives access to reload the DeathMessagesPrime plugin's configuration.
+      default: op
+   deathmessagesprime.debug:
+      description: Broadcasts death debug information if debug mode is enabled.
+      default: op
+   deathmessagesprime.toggle:
+      description: Allows the usage of /toggledeathmsg
+      default: op
